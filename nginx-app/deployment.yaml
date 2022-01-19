@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-rp1
+spec:
+  selector:
+    matchLabels:
+      name: hello-rp1
+  template:
+    metadata:
+      labels:
+        name: hello-rp1
+    spec:
+      containers:
+        - name: app
+          image: nginx:1.12.0
+          ports:
+            - containerPort: 8080
