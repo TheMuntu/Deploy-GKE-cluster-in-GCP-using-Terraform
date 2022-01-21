@@ -1,7 +1,7 @@
 provider "google" {
   
-  credentials = file("/home/pacome/.config/gcloud/application_default_credentials.json")
-  project = "elemental-shine-338522" 
+  credentials = file("/home/st6/.config/gcloud/application_default_credentials.json")
+  project = "calm-seeker-337410" 
 }
 
 module "gke_auth" {
@@ -64,13 +64,6 @@ module "gke" {
       max_count                 = 3
       disk_size_gb              = 30
     },
-    {
-      name                      = "node-pool2"
-      machine_type              = "n1-standard-1"
-      node_locations            = "europe-west1-b"
-      min_count                 = 1
-      max_count                 = 2
-      disk_size_gb              = 100
-    }
+    
   ]
 }

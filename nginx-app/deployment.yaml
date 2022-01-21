@@ -1,18 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hello-rp1
+  name: rp1-app
 spec:
   selector:
     matchLabels:
-      name: hello-rp1
+      name: rp1-app
   template:
     metadata:
       labels:
-        name: hello-rp1
+        name: rp1-app
     spec:
       containers:
-        - name: app
-          image: nginx:1.12.0
+        - name: appclear
+        
+          image: themuntu/rp1-app:latest
           ports:
-            - containerPort: 8080
+            - containerPort: 80

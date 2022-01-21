@@ -1,15 +1,21 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: hello-rp1
+  name: rp1-app
   annotations:
     cloud.google.com/load-balancer-type: "External"
     kubernetes.io/ingress.class: "gce"
 spec:
   rules:
-    - http:
-        paths:
-          - path: /*
-            backend:
-              serviceName: hello-rp1
-              servicePort: 80
+  - http:
+      paths:
+      - path: /*
+        pathType: ImplementationSpecific
+        backend:
+          service:
+            name: rp1-app
+            port:
+              number: 80
+
+
+              

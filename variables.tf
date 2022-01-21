@@ -1,6 +1,6 @@
 variable "project_id" {
   description = "The project ID to host the cluster in"
-  default     = "elemental-shine-338522"
+  default     = "calm-seeker-337410"
 }
 
 variable "cluster_name" {
@@ -10,7 +10,7 @@ variable "cluster_name" {
 
 variable "env_name" {
   description = "The environment for the GKE cluster"
-  default     = "dev"
+  default     = "prod"
 }
 
 variable "region" {
