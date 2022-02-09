@@ -1,4 +1,4 @@
-# RP1-Deploying-a-GKE-cluster-in-GCP-using-Terraform
+# Deploying a GKE cluster in GCP using Terraform
 
 The purpose of this project to simplify infrastructure deployment in GCP using Terraform.
 You will find in this repo the necessary to perform the following:
